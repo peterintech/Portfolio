@@ -47,7 +47,7 @@ const AnimatedCounter = () => {
             }}
             className="border border-lightBlue/20 rounded-lg px-4 py-6 flex flex-col justify-center"
           >
-            <div className="text-4xl font-bold mb-2">
+            <div className="md:text-4xl text-xl font-bold mb-2">
               <span className="count">0</span>
               {item.suffix}
             </div>

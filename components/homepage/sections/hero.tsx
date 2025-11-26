@@ -8,6 +8,17 @@ import Button from "../ui/button";
 import AnimatedCounter from "../ui/animatedCounter";
 
 function Hero() {
+  const gotoWorks = () => {
+    const target = document.getElementById("counter"); // Find the section with ID "counter"
+
+    if (target && "counter") {
+      const offset = window.innerHeight * 0.15; // Leave a bit of space at the top
+      const top =
+        target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   useGSAP(() => {
     gsap.fromTo(
       ".hero-text h1,.desc",
@@ -35,13 +46,13 @@ function Hero() {
           <Button
             text="See My Work"
             className="md:w-80 md:h-16 w-60 h-12"
-            id="counter"
+            onClick={gotoWorks}
           />
           <div className="md:mt-12">
             <p className="text-sm text-accent mb-2">
               Connect with me (@peterintech) on all Socials:
             </p>
-            <div className="w-full flex gap-4 social">
+            <div className="w-full flex justify-center md:justify-start gap-4 social">
               {socialLinks.map(({ link, icon }) => (
                 <a key={link} href={link} className="mx-2">
                   {icon}

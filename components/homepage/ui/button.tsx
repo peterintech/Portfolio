@@ -3,40 +3,26 @@ import { ArrowDown } from "lucide-react";
 const Button = ({
   text,
   className,
-  id,
+  onClick,
+  icon = (
+    <ArrowDown className="arrow-icon group-hover:translate-y-1 transition-transform duration-300" />
+  ),
 }: {
   text: string;
   className?: string;
   id?: string;
+  onClick: () => void;
+  icon?: React.ReactNode;
 }) => {
   return (
     <a
-      onClick={(e) => {
-        e.preventDefault();
-
-        const target = document.getElementById("counter"); // Find the section with ID "counter"
-
-        // Only scroll if we found the section and an ID is passed in
-        // that prevents the contact button from scrolling to the top
-        if (target && id) {
-          const offset = window.innerHeight * 0.15; // Leave a bit of space at the top
-
-          // Calculate how far down the page we need to scroll
-          const top =
-            target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-          // Scroll smoothly to that position
-          window.scrollTo({ top, behavior: "smooth" });
-        }
-      }}
+      onClick={onClick}
       className={`${className ?? ""} cta-wrapper`} // Add base + extra class names
     >
       <div className="cta-button group">
         <div className="bg-circle" />
         <p className="text">{text}</p>
-        <div className="arrow-wrapper">
-          <ArrowDown />
-        </div>
+        <div className="arrow-wrapper">{icon}</div>
       </div>
     </a>
   );

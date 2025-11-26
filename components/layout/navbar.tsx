@@ -106,24 +106,30 @@ function Menu() {
                   <p>&#x2715;</p>
                 </div>
                 <div className="flex flex-col">
-                  <a target="_blank" href={socialLinks.github}>
-                    Github &#8599;
-                  </a>
-                  <a target="_blank" href={socialLinks.x}>
-                    X &#8599;
-                  </a>
-                  <a target="_blank" href={socialLinks.linkedIn}>
-                    LinkedIn &#8599;
-                  </a>
-                  <a target="_blank" href={socialLinks.instagram}>
-                    Instagram &#8599;
-                  </a>
+                  {socialLinks.map(({ name, link }) => (
+                    <a
+                      target="_blank"
+                      href={link}
+                      key={name}
+                      className="capitalize hover:text-background/30"
+                    >
+                      {name} &#8599;
+                    </a>
+                  ))}
                 </div>
                 <div className="flex flex-col">
-                  <a href="mailto:ogbonnapete210@gmail.com">
+                  <a
+                    href="mailto:ogbonnapete210@gmail.com"
+                    className="hover:text-background/30"
+                  >
                     ogbonnapete210@gmail.com&#8599;
                   </a>
-                  <a href="tel:+2349077210759">(234) 9077210759 &#8599;</a>
+                  <a
+                    href="tel:+2349077210759"
+                    className="hover:text-background/30"
+                  >
+                    (234) 9077210759 &#8599;
+                  </a>
                 </div>
               </div>
               <div className="flex flex-1 items-end justify-end">
