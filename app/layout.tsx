@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import NavBar from "@/components/layout/navbar";
 
 const myFont = localFont({
   src: "../fonts/microgme-webfont.woff2",
@@ -18,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${myFont.className} antialiased`}>{children}</body>
+      <body className={`${myFont.className} antialiased`}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -133,11 +133,11 @@ function Menu() {
                 </div>
               </div>
               <div className="flex flex-1 items-end justify-end">
-                <a href="#contact" className="contact-btn group">
+                <Link href="/#contact" className="contact-btn group">
                   <div className="inner">
                     <span>Contact me</span>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
