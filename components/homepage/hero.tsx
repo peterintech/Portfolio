@@ -1,10 +1,11 @@
 "use client";
 
-import { socialLinks } from "@/constants";
+import { counterItems, socialLinks } from "@/constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import Button from "../shared/button";
+import AnimatedCounter from "./animatedCounter";
 
 function Hero() {
   useGSAP(() => {
@@ -36,11 +37,11 @@ function Hero() {
             className="md:w-80 md:h-16 w-60 h-12"
             id="counter"
           />
-          <div className="">
-            <p className="text-sm text-gray-500 mb-2">
-              Connect with me on Social Media:
+          <div className="md:mt-12">
+            <p className="text-sm text-accent mb-2">
+              Connect with me (@peterintech) on all Socials:
             </p>
-            <div className="w-full flex justify-between social">
+            <div className="w-full flex gap-4 social">
               {socialLinks.map(({ link, icon }) => (
                 <a key={link} href={link} className="mx-2">
                   {icon}
@@ -50,10 +51,11 @@ function Hero() {
           </div>
         </div>
         {/* Hero image */}
-        <div className="lg:absolute lg:bottom-1 lg:right-2 md:-mr-16">
-          <Image src={"/Hero_img.png"} alt="hero" width={600} height={448.29} />
+        <div className="lg:absolute lg:bottom-12 lg:right-2 md:-mr-16">
+          <Image src={"/Hero_img.png"} alt="hero" width={550} height={448.29} />
         </div>
       </div>
+      <AnimatedCounter />
     </section>
   );
 }

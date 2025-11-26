@@ -5,7 +5,7 @@
   --lighterBlue: #effdff;
   --background: #0f172a;
   --foreground: #ffffff;
-  --accent: #cccccc;
+  --accent: #737e9f;
 }
 
 @theme inline {
@@ -27,6 +27,9 @@ body {
   }
   .flex-col-center {
     @apply flex flex-col justify-center items-center;
+  }
+  .grid-4-cols {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2;
   }
 }
 

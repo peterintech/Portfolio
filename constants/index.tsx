@@ -78,7 +78,7 @@ const socialLinks = [
     ),
   },
   {
-    link: "https://www.linkedin.com/in/peter-ogbonna-9889721b2/",
+    link: "https://www.linkedin.com/in/peterintech",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -144,9 +144,9 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
+  { value: 3, suffix: "+", label: "Years of Experience" },
+  { value: 10, suffix: "+", label: "Satisfied Clients" },
+  { value: 20, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
 
