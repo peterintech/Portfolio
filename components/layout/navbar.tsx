@@ -60,7 +60,7 @@ function Menu() {
 
   return (
     <nav className="menu-container" ref={container}>
-      <div className="container-x">
+      <div className="container-x z-100">
         <div className="menu-header">
           <div>
             <Link href="/" className="text-lightBlue logo">

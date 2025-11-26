@@ -37,7 +37,7 @@ const AnimatedCounter = () => {
   });
 
   return (
-    <div id="counter" className="py-6 container-x">
+    <div id="counter" className="pt-6 container-x">
       <div className="mx-auto grid-4-cols">
         {counterItems.map((item, index) => (
           <div

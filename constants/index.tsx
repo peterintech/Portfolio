@@ -149,6 +149,33 @@ const counterItems = [
   { value: 20, suffix: "+", label: "Completed Projects" },
   { value: 90, suffix: "%", label: "Client Retention Rate" },
 ];
+const gridItems = [
+  {
+    id: 1,
+    title: "I prioritize transparency and open communication",
+    description: "",
+    className:
+      "md:col-span-1 row-span-2 col-span-2 md:min-h-[60vh] min-h-[40vh]",
+    titleClassName: "justify-end",
+    img: "/transparency.png",
+  },
+  {
+    id: 2,
+    title: "I’m very flexible with time zone communications.",
+    description: "",
+    className: "md:col-span-1 col-span-2",
+    titleClassName: "justify-start",
+    img: "",
+  },
+  {
+    id: 3,
+    title: "My tech stack",
+    description: "I constantly try to improve",
+    className: "md:col-span-1 col-span-2",
+    titleClassName: "justify-center",
+    img: "",
+  },
+];
 
 const logoIconsList = [
   {
@@ -473,5 +500,6 @@ export {
   techStackImgs,
   navLinks,
   socialLinks,
+  gridItems,
   projects,
 };

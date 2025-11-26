@@ -1,11 +1,11 @@
 "use client";
 
-import { counterItems, socialLinks } from "@/constants";
+import { socialLinks } from "@/constants";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
-import Button from "../shared/button";
-import AnimatedCounter from "./animatedCounter";
+import Button from "../ui/button";
+import AnimatedCounter from "../ui/animatedCounter";
 
 function Hero() {
   useGSAP(() => {
