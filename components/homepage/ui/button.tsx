@@ -1,6 +1,7 @@
 import { ArrowDown } from "lucide-react";
 
 const Button = ({
+  type,
   text,
   className,
   onClick,
@@ -8,14 +9,16 @@ const Button = ({
     <ArrowDown className="arrow-icon group-hover:translate-y-1 transition-transform duration-300" />
   ),
 }: {
+  type?: "button" | "submit" | "reset";
   text: string;
   className?: string;
   id?: string;
-  onClick: () => void;
+  onClick?: () => void;
   icon?: React.ReactNode;
 }) => {
   return (
-    <a
+    <button
+      type={type}
       onClick={onClick}
       className={`${className ?? ""} cta-wrapper`} // Add base + extra class names
     >
@@ -24,7 +27,7 @@ const Button = ({
         <p className="text">{text}</p>
         <div className="arrow-wrapper">{icon}</div>
       </div>
-    </a>
+    </button>
   );
 };
 
