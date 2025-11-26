@@ -3,8 +3,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import MenuIcon from "@mui/icons-material/Menu";
 
-import Link from "next/link";
 import { socialLinks } from "../Title/title";
+import Link from "next/router";
 
 function Menu() {
   const menuLinks = [
@@ -61,9 +61,7 @@ function Menu() {
     <nav className="menu-container" ref={container}>
       <div className="menu-header">
         <div>
-          <Link href="/">
-            <a className="text-lightBlue text-2xl">Peter</a>
-          </Link>
+          <Link className="text-lightBlue text-2xl">Peter</Link>
         </div>
         <div
           className="p-2 border border-lightBlue rounded-lg hover:bg-lightBlue cursor-pointer active:scale-95"
@@ -75,8 +73,8 @@ function Menu() {
       <div className="menu-overlay">
         <div className="menu-header">
           <div>
-            <Link href="/">
-              <a className={"text-black text-2xl"}>Peter</a>
+            <Link className="text-black text-2xl" href="/">
+              Peter
             </Link>
           </div>
           <div
