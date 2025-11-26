@@ -1,20 +1,9 @@
-const navLinks = [
-  {
-    name: "Work",
-    link: "#work",
-  },
-  {
-    name: "Experience",
-    link: "#experience",
-  },
-  {
-    name: "Skills",
-    link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
+const menuLinks = [
+  { path: "/", label: "Home" },
+  { path: "/#about", label: "About" },
+  { path: "/#experience", label: "Experience" },
+  { path: "/projects", label: "Projects" },
+  { path: "/#contact", label: "Contact" },
 ];
 const socialLinks = [
   {
@@ -382,7 +371,7 @@ export {
   testimonials,
   socialImgs,
   techStackImgs,
-  navLinks,
+  menuLinks,
   socialLinks,
   gridItems,
   projects,

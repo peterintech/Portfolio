@@ -9,9 +9,9 @@ import AnimatedCounter from "../ui/animatedCounter";
 
 function Hero() {
   const gotoWorks = () => {
-    const target = document.getElementById("counter"); // Find the section with ID "counter"
+    const target = document.getElementById("showcase"); // Find the section with ID "counter"
 
-    if (target && "counter") {
+    if (target) {
       const offset = window.innerHeight * 0.15; // Leave a bit of space at the top
       const top =
         target.getBoundingClientRect().top + window.pageYOffset - offset;

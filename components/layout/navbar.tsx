@@ -5,16 +5,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { MenuIcon } from "lucide-react";
 import Link from "next/link";
-import { socialLinks } from "@/constants";
+import { menuLinks, socialLinks } from "@/constants";
 
 function Menu() {
-  const menuLinks = [
-    { path: "/", label: "Home" },
-    { path: "/#about", label: "About" },
-    { path: "/projects", label: "Projects" },
-    { path: "/#contact", label: "Contact" },
-  ];
-
   const container = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

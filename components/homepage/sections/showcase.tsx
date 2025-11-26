@@ -62,7 +62,7 @@ const AppShowcase = () => {
   }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="container-x py-20">
+    <section id="showcase" ref={sectionRef} className="container-x py-20">
       <div className="flex flex-col md:items-end">
         <Heading text="My Recent" strong="Projects" />
         <p className="md:text-right -mt-6 mb-8 text-accent">
