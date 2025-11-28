@@ -308,6 +308,17 @@ const projects = [
     stack: "React, Chakra UI and Tailwindcss",
   },
   {
+    title: "Apple iPhone 15 Pro Clone",
+    url: {
+      github: "https://github.com/peterintech/apple-website-clone",
+      live: "https://apple-iphon5pro.vercel.app/",
+      image: "/iphone_15.png",
+    },
+    description:
+      "A recreation of the iPhone 15 Pro launch page featuring heavy animations and interactive 3D elements. Users can customize the iPhone model's color and size in real-time.",
+    stack: "React, Three.js, GSAP, TailwindCSS",
+  },
+  {
     title: "The Magnifique Sphere",
     url: {
       github: "#",
