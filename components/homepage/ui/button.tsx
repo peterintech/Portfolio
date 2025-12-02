@@ -1,25 +1,21 @@
 import { ArrowDown } from "lucide-react";
 
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  text: string;
+  icon?: React.ReactNode;
+}
+
 const Button = ({
-  type,
   text,
   className,
-  onClick,
   icon = (
     <ArrowDown className="arrow-icon group-hover:translate-y-1 transition-transform duration-300" />
   ),
-}: {
-  type?: "button" | "submit" | "reset";
-  text: string;
-  className?: string;
-  id?: string;
-  onClick?: () => void;
-  icon?: React.ReactNode;
-}) => {
+  ...props
+}: ButtonProps) => {
   return (
     <button
-      type={type}
-      onClick={onClick}
+      {...props}
       className={`${className ?? ""} cta-wrapper`} // Add base + extra class names
     >
       <div className="cta-button group">
