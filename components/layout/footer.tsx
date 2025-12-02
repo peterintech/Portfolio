@@ -13,7 +13,7 @@ const Footer = () => {
           </a>
         </div>
         <div>
-          <p>Built with ❤️ by me © {new Date().getFullYear()}</p>
+          <p>Built with ❤️ by me</p>
         </div>
         <div className="socials">
           {socialLinks.map(({ link, icon }) => (
