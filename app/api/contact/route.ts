@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
-      subject: "We received your message",
+      subject: "I received your message",
       html: `
         <h2>Thank you for reaching out!</h2>
         <p>Hi ${name},</p>
