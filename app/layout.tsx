@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
 import NavBar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const myFont = localFont({
   src: "../fonts/microgme-webfont.woff2",
@@ -22,6 +24,8 @@ export default function RootLayout({
       <body className={`${myFont.className} antialiased`}>
         <NavBar />
         {children}
+        <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -7,6 +7,27 @@ const menuLinks = [
 ];
 const socialLinks = [
   {
+    name: "x",
+    link: "https://x.com/Peterintech",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="35"
+        height="35"
+        viewBox="0 0 48 48"
+      >
+        <path
+          fill="none"
+          strokeWidth={2}
+          stroke="var(--lightBlue)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M21.604 25.622L7.693 41.498M37.924 6.502L25.554 21.07M6.61 6.5l27.44 35h7.56l-27.439-35z"
+        ></path>
+      </svg>
+    ),
+  },
+  {
     name: "github",
     link: "https://github.com/peterintech",
     icon: (
@@ -99,27 +120,6 @@ const socialLinks = [
           strokeLinecap="round"
           strokeLinejoin="round"
           d="M40.5 5.5h-33a2 2 0 0 0-2 2v33a2 2 0 0 0 2 2h33a2 2 0 0 0 2-2v-33a2 2 0 0 0-2-2"
-        ></path>
-      </svg>
-    ),
-  },
-  {
-    name: "x",
-    link: "https://x.com/Peterintech",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="35"
-        height="35"
-        viewBox="0 0 48 48"
-      >
-        <path
-          fill="none"
-          strokeWidth={2}
-          stroke="var(--lightBlue)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M21.604 25.622L7.693 41.498M37.924 6.502L25.554 21.07M6.61 6.5l27.44 35h7.56l-27.439-35z"
         ></path>
       </svg>
     ),

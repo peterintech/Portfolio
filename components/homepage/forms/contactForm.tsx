@@ -65,10 +65,10 @@ const ContactForm = () => {
         title: "Oops!",
         message:
           err instanceof Error
-            ? err.message
+            ? `${err.message}. Please try again later.`
             : "An error occurred while sending your message.",
       });
-      console.error("Error:", err);
+      console.log("Error:", err);
     } finally {
       setLoading(false);
     }
