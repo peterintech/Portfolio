@@ -46,6 +46,7 @@ const ContactForm = () => {
       });
 
       if (!response.ok) {
+        console.error("Failed to send email:", response.statusText);
         throw new Error("Failed to send email");
       }
 
