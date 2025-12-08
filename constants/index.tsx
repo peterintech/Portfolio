@@ -181,7 +181,7 @@ const techStackImgs = [
 const expCards = [
   {
     review:
-      "Peter brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+      "Working with Peter has been one of the highlights of building Teeket, he doesn’t just “do the work” he brings ideas, color, and life into every feature he touches. He’s not just a developer; he’s a builder with heart.",
     logoPath: "/teeket-logo.png",
     title: "Frontend Engineer",
     date: "January 2025 - present",
@@ -196,7 +196,7 @@ const expCards = [
       "Peter's contributions to our startup have been outstanding. He approaches challenges with a problem-solving mindset and creativity",
     logoPath: "/cryptnance-logo.png",
     title: "Frontend Engineer",
-    date: "June 2023 - December 2024",
+    date: "Febuary 2024 - January 2025",
     responsibilities: [
       "Spearheaded the development of cryptnance's crypto fintech platform",
       "Collaborated closely with UI/UX designers and backend developers to ensure functionality and seamless user experiences.",
