@@ -1,15 +1,19 @@
+//approach.tsx
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CanvasRevealEffect } from "../ui/canvasRevealEffect";
 import { useGSAP } from "@gsap/react";
 import Heading from "../ui/Heading";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Approach = () => {
   return (
-    <section className="w-full hidden lg:block py-20 container-x" id="approach">
+    <section className="w-full py-20 container-x" id="approach">
       <Heading text="My" strong="Approach" />
       {/* remove bg-white dark:bg-black */}
       <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -74,10 +78,29 @@ const Card = ({
   des: string;
 }) => {
   const [hovered, setHovered] = React.useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const cardRef = useRef<HTMLDivElement>(null);
+  const iconRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const desRef = useRef<HTMLParagraphElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
 
+  // Detect mobile on mount
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // desktop
   useGSAP(() => {
-    if (!canvasRef.current) return;
+    if (isMobile || !canvasRef.current) return;
 
     if (hovered) {
       gsap.to(canvasRef.current, {
@@ -92,7 +115,40 @@ const Card = ({
         ease: "power2.out",
       });
     }
-  }, [hovered]);
+  }, [hovered, isMobile]);
+
+  // mobile
+  useGSAP(() => {
+    if (!isMobile || !canvasRef.current) return;
+
+    const triggerEl = cardRef.current;
+    if (!triggerEl) return;
+
+    const scrollTrigger = {
+      trigger: triggerEl,
+      start: "top 60%",
+      end: "bottom 40%",
+      toggleActions: "play reverse play reverse",
+    };
+
+    const animations = [
+      { element: canvasRef.current, opacity: 1 },
+      { element: iconRef.current, opacity: 0 },
+      { element: titleRef.current, opacity: 1 },
+      { element: desRef.current, opacity: 1 },
+    ];
+
+    animations.forEach(({ element, opacity }) => {
+      gsap.to(element, {
+        opacity,
+        duration: 0.3,
+        ease: "power2.out",
+        scrollTrigger: {
+          ...scrollTrigger,
+        },
+      });
+    });
+  }, [isMobile]);
 
   return (
     <div
@@ -109,21 +165,24 @@ const Card = ({
         {children}
       </div>
 
-      <div className="relative z-20 px-10 canvas-card-content">
+      <div className="relative z-20 px-10 canvas-card-content" ref={cardRef}>
         <div
           className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
         group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center"
+          ref={iconRef}
         >
           {icon}
         </div>
         <h2
+          ref={titleRef}
           className="text-center text-3xl opacity-0 group-hover/canvas-card:opacity-100
-         relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white 
-         group-hover/canvas-card:-translate-y-2 transition duration-200"
+         relative z-10 mt-4  font-bold group-hover/canvas-card:text-white 
+         group-hover/canvas-card:-translate-y-2 transition duration-200 text-white"
         >
           {title}
         </h2>
         <p
+          ref={desRef}
           className="text-sm opacity-0 group-hover/canvas-card:opacity-100
          relative z-10 mt-4 group-hover/canvas-card:text-white text-center
          group-hover/canvas-card:-translate-y-2 transition duration-200"
