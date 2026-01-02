@@ -2,7 +2,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const World = dynamic(() => import("./globe").then((m) => m.World), {
   ssr: false,
@@ -32,12 +32,10 @@ const GridGlobe = () => {
     autoRotateSpeed: 0.5,
   };
 
-  const [sampleArcs, setSampleArcs] = useState<any[]>([]);
-
-  useEffect(() => {
+  const [sampleArcs] = useState<any[]>(() => {
     const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
 
-    const generated = [
+    return [
       {
         order: 1,
         startLat: -19.885592,
@@ -399,8 +397,7 @@ const GridGlobe = () => {
         color: colors[Math.floor(Math.random() * colors.length)],
       },
     ];
-    setSampleArcs(generated);
-  }, []);
+  });
 
   return (
     <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
