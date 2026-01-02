@@ -1,6 +1,8 @@
 import Heading from "../ui/Heading";
-import ContactExperience from "../models/contactExperience";
 import ContactForm from "../forms/contactForm";
+import dynamic from "next/dynamic";
+
+const ContactExperience = dynamic(() => import("../models/contactExperience"));
 
 const Contact = () => {
   return (

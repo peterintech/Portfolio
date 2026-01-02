@@ -181,11 +181,11 @@ body {
 
   /* skills */
   .tech-card-animated-bg {
-    @apply absolute left-0 bottom-[-100%] w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
+    @apply absolute left-0 -bottom-full w-full h-full bg-[#2D3240] group-hover:bottom-0 transition-all duration-700;
   }
 
   .tech-card-content {
-    @apply flex flex-col md:justify-center items-center lg:gap-5 lg:h-[50vh] p-6 overflow-hidden relative z-10 group-hover:cursor-grab w-40;
+    @apply flex flex-col md:justify-center items-center lg:gap-5 p-6 overflow-hidden relative z-10 group-hover:cursor-grab lg:w-50 w-40;
 
     & p {
       @apply text-lg 2xl:text-2xl pb-5 lg:pb-0 font-semibold text-[#DAE3FF] text-center;
