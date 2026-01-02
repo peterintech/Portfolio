@@ -201,9 +201,10 @@ const expCards = [
     title: "Frontend Engineer",
     date: "January 2025 - present",
     responsibilities: [
-      "Optimized and scaled the halfway-built event management platform, thereby improving overall performance by over 80%.",
-      "Refactored legacy codebases to enhance maintainability and scalability",
-      "Collaborated closely with UI/UX designers and backend developers to ensure functionality and seamless user experiences.",
+      "Increased user engagement by delivering a scalable and performant event management platform at Teeket, leveraging React and Chakra UI.",
+      "Ensured seamless event management experiences by architecting robust features in close collaboration with backend developers",
+      "Enhanced UX/UI consistency and accessibility by optimizing frontend architecture and aligning implementation with design specifications",
+      "Reduced technical debt through refactoring legacy code and implementing maintainable component and folder structures.",
     ],
   },
   {
@@ -213,10 +214,10 @@ const expCards = [
     title: "Frontend Engineer",
     date: "Febuary 2024 - January 2025",
     responsibilities: [
-      "Spearheaded the development of cryptnance's crypto fintech platform",
-      "Collaborated closely with UI/UX designers and backend developers to ensure functionality and seamless user experiences.",
-      "Implemented a real-time transaction monitoring dashboard, increasing administrative efficiency",
-      "Optimized the web application for maximum speed and scalability.",
+      "Successfully launched a crypto fintech platform, single-handedly leading the end-to-end frontend development and integration",
+      "Improved system performance and transaction reliability, enabling seamless transactions with 250+ unique visitors",
+      "Boosted administrative efficiency by 60% by building a real-time transaction monitoring dashboard with enhanced data visualization and interaction.",
+      "Achieved high-precision UI and seamless data integration by coordinating with the backend developer and designer to implement RESTful APIs and pixel-perfect designs. ",
     ],
   },
 ];

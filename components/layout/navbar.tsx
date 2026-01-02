@@ -112,16 +112,16 @@ function Menu() {
                 </div>
                 <div className="flex flex-col">
                   <a
+                    href="https://dev.to/peterintech"
+                    className="hover:text-background/30"
+                  >
+                    Visit my blog&#8599;
+                  </a>
+                  <a
                     href="mailto:ogbonnapete210@gmail.com"
                     className="hover:text-background/30"
                   >
                     ogbonnapete210@gmail.com&#8599;
-                  </a>
-                  <a
-                    href="tel:+2349077210759"
-                    className="hover:text-background/30"
-                  >
-                    (234) 9077210759 &#8599;
                   </a>
                 </div>
               </div>

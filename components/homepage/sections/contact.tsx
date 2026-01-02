@@ -7,13 +7,13 @@ const Contact = () => {
     <section id="contact" className="flex-center container-x py-20">
       <div className="w-full h-full">
         <Heading text="Have a Project" strong="in Mind?" />
-        <div className="flex md:flex-row gap-6 flex-col mt-10 w-full items-center">
-          <div className="flex-1">
+        <div className="contact-layout">
+          <div className="max-w-lg w-full">
             <ContactForm />
           </div>
 
-          <figure className="flex-1">
-            <div className="w-full h-full min-h-[300px]">
+          <figure>
+            <div className="contact-3d-layout">
               <ContactExperience />
             </div>
           </figure>
