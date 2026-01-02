@@ -231,7 +231,7 @@ body {
     @apply relative z-10 md:h-dvh h-[80vh] flex lg:items-center items-start justify-between;
   }
   .contact-3d-layout {
-    @apply lg:w-[60%] w-full h-full min-h-[50vh] absolute lg:-top-20 top-24 lg:-right-20 right-0;
+    @apply lg:w-[60%] w-full h-full min-h-[50vh] absolute lg:-top-20 top-40 lg:-right-20 right-0;
   }
 
   .contact-btn {
@@ -377,7 +377,7 @@ textarea:focus {
   background-image: url("/bg-left.png");
   background-repeat: no-repeat;
 }
-#projects {
+#skills {
   background-image: url("/bg-left.png");
   background-size: contain;
   background-repeat: no-repeat;

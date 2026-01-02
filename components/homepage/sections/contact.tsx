@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="w-full h-full">
         <Heading text="Have a Project" strong="in Mind?" />
         <div className="contact-layout">
-          <div className="max-w-lg w-full">
+          <div className="max-w-lg w-full z-100">
             <ContactForm />
           </div>
 

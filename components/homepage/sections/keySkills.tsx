@@ -31,7 +31,7 @@ const KeySkills = () => {
   });
 
   return (
-    <div id="skills" className="flex-center container-x py-20">
+    <section id="skills" className="flex-center container-x py-20">
       <div className="w-full h-full">
         <div className="flex flex-col md:items-end">
           <Heading text="Key" strong="Skills" />
@@ -61,7 +61,7 @@ const KeySkills = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
