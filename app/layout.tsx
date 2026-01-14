@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import NavBar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const myFont = localFont({
   src: "../fonts/microgme-webfont.woff2",
@@ -25,6 +26,8 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
